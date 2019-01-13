@@ -1,0 +1,106 @@
+
+#FICHEROS NECESARIOS PARA LA REALIZACIÓN DE LA PRÁCTICA:
+
+- twitterstream.py: realiza la descarga de los tweets en función del tiempo y las claves dadas. 
+
+- MRJobTwitter.py: realiza la analítica de tweets mediante MRJob y pasa el resultado final a la base de datos twitterdb. 
+Para poder guardar el resultado en la base de datos se ha escogido la base de datos no relacional Mongo, ya que figuraba 
+un ejemplo del uso de la misma en el material proporcionado para clase por los profesores. 
+Se ha añadido en el mapper_initial la creación de la base de datos y en el último reducer se ha sustituido la 
+sentencia shield por la creación del elemento con la información necesaria y se realiza el guardado. 
+
+	Creación de la base de datos:
+		client = MongoClient('db',27017)
+        	self.db = client.twitterdb
+	Guardado de la información:
+		item_db = {
+			'trending topic':result['trending_topic'],
+			'happiest state':result['happiest_state'],
+			'state punctuation':result['punctuation']
+		}
+		self.db.twitterdb.insert_one(item_db)
+
+- AFINN-111.txt: diccionario en inglés donde se encuentran las palabras junto a las puntuaciones
+
+- docker-compose.yml: documento donde se realizan las llamadas a los contenedores de tweetanalysis y db.
+
+- Dockerfile: documento que se emplea para la creación de la imagen que se basa en cloudera y contendrá los pasos 
+necesarios para instalar en cloudera todo lo necesario para la descarga y analítica de tweets. En él, finalmente se 
+llama a la shell de cloudera para ejecutar el fichero "cloudera". 
+
+- cloudera: documento a ejecutar por la shell de cloudera para que realice la descarga de tweets, su paso a hdfs y 
+la analítica de los mismos mediante hadoop. Para poder realizar los pasos indicados de manera automática en la shell de 
+cloudera será necesario copiar el contenido del fichero /usr/bin/docker-quickstart. 
+
+
+#PASOS A SEGUIR:
+
+1. Todos los ficheros proporcionados deben estar situados en un mismo directorio. 
+
+2. Se contruye la imagen de cloudera ampliada. Para ello usamos docker compose y, teniendo en el fichero yml build: . , 
+en vez de la línea image del servicio tweetanalysis se ejecuta en la shell:
+
+	docker-compose build tweetanalysis 
+   Otra opción sería: docker build -t name_image . (no la hemos probado en este caso pero es la manera en la que 
+   habitualmente se construye una imagen a partir de un dockerfile)
+   Se genera una imagen llamada cloud_tweetanalysis.
+
+3. Se sube la imagen a Docker Hub, para ello hay que seguir estos pasos:
+	1- expost DOCKER_ID_USER=username_de_dockerhub
+	2- docker login
+	3- docker tag name_image $DOCKER_ID_USER/name_image
+	4- docker push $DOCKER_ID_USER/name_image
+
+4. Una vez subida la imagen a Docker Hub, como usamos el docker-compose para construir la imagen y hacer pruebas antes 
+de subir la imagen, será necesario borrar la línea build: . y añadir la línea image: esterc94/cloud_tweetanalysis:latest
+
+5. Ejecutar el mandato que se indica a continuación. Este mandato es distinto del original que se indica en el enunciado 
+de la práctica ya que no hemos sido capaces de averiguar cómo obtener las 4 claves necesarias a partir del nombre de 
+usuario de twitter: 
+
+	docker-compose run -e DOWNLOAD_TIME=XXX -e ACCESS_TOKEN_KEY=XXX -e ACCESS_TOKEN_SECRET=XXX -e CONSUMER_KEY=XXX -e CONSUMER_SECRET=XXX tweetanalysis
+
+6. Para consultar la base de datos, se hace sin haber parado el contenedor iniciado y se ejecuta el siguiente mandato:
+	docker exec -it container_id mongo twitterdb
+   Dentro de la base de datos, para poder ver la información se ejecuta db.twitterdb.find()
+   Una vez finalizada la consulta, se puede salir con exit. 
+
+#COMENTARIOS
+
+Para la realización de esta práctica, las pruebas se han hecho principalmente con la sentencia inline, no con hadoop, 
+ya que eso requería más mandatos a realizar en la shell de cloudera y nos llevó un tiempo dar con la forma adecuada 
+para ello. Además, las pruebas iniciales se realizaron pasando el tiempo directamente en el dockerfile y con las 
+claves escritas directamente en el twitterstream.py, es decir, sin recoger ninguna variable de entorno del mandato. 
+La sentencia CMD del dockerfile quedaba de la siguiente manera:
+
+	CMD ["bash","-c","python twitterstream.py 20 -o -> tweets.json && python MRJobTwitter.py -r inline tweets.json 
+  --file AFINN-111.txt"]
+
+
+Una vez comprobado el funcionamiento correcto de la descarga y analítica de tweets y ya sabiendo que la conexión 
+con la base de datos se establecía de manera adecuada, pasamos a coger las variables de entorno del mandato. 
+Como ya se comentó anteriormente, no logramos encontrar una forma de conseguir las claves necesarias a través del usuario 
+de twitter, así que hemos modificado el mandato. El código proporcionado por los profesores queda de la misma manera. 
+Para coger las variables, se cambió la sentencia CMD añadiendo tras el twitterstream.py las variables iniciadas por $ en 
+el orden pedido en el twitterstream.py.
+
+Realizamos una subida de la imagen a Docker Hub para comprobar el funcionamiento descargando la imagen, no creándola y 
+funcionó sin problemas. 
+
+Por últimos, decidimos añadir la analítica de tweets mediante hadoop y, para ello, fue necesario cambiar completamente 
+la sentecia CDM para llamar a la bash de cloudera y que ejecute el fichero "cloudera" con los pasos necesarios para 
+realizar las acciones indicadas inicialmente:
+
+	CMD ["bash","-c","./cloudera"]
+  
+Esta llamada nos dió un problema en cuanto a los permisos que fue fácil de resolver, sin embargo, el propio ejecutable 
+nos originó varias complicaciones, ya que la realización de acciones no estaba automatizada en la shell y nos supuso un 
+consumo considerable de tiempo hasta que encontramos que la solución era añadir el contenido del fichero 
+/usr/bin/cloudera-quickstart a nuestro script. Otro problema que tuvimos fue que el fichero tweets.json no se subía a hdfs, 
+nos llevó un buen rato darnos cuenta del fallo y era un problema del directorio que habíamos creado (/practica en vez 
+de practica/).
+
+Tras comprobar que el funcionamiento era adecuado, subimos la imagen a Docker Hub y realizamos unas últimas pruebas. 
+
+
+
