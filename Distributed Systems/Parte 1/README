@@ -1,6 +1,6 @@
 NOTA SOBRE LOS FICHEROS DE TWEETS DESCARGADOS
 
-Debido al peso de uno de los ficheros de los tweets no se han podido incluir aquí. En el fichero enlace_tweets_descargados.txt 
+Debido al peso de uno de los ficheros de los tweets no se han podido incluir aquí. En el fichero Tweets
 figura un enlace desde donde se pueden descargar dichos ficheros. 
 El resultado que figura en la memoria corresponde al archivo de 8GB, los otros dos simplemente se han usado para 
 pruebas iniciales y para comparar el tiempo en cuanto a escalabilidad.
@@ -18,7 +18,8 @@ PASOS PARA LA EJECUCIÓN
 5. Para ejecutar local: python MRJobTwitter.py -r local tweets.json --file AFINN-111.txt
 
 6. Para ejecutar con Hadoop:
-	6.1. Subir a hdfs los ficheros de entrada: hdfs dfs -put tweets.json /practica (si el directorio no está creado, crearlo mediante hdfs dfs -mkdir practica)
+	6.1. Subir a hdfs los ficheros de entrada: hdfs dfs -put tweets.json /practica (si el directorio no está creado, 
+	crearlo mediante hdfs dfs -mkdir practica)
 	6.2. Ejecutar: python MRJobTwitter.py -r hadoop hdfs:///user/root/practica/tweets.json --file AFINN-111.txt
 
 EN CASO DE PROBLEMAS DE PERMISOS EN HADOOP (COMO ME OCURRIÓ A MI)
@@ -31,8 +32,10 @@ Previo. Usando como base ubuntu y teniendo instalado docker
 
 3. Subir los ficheros al contenedor de Cloudera: docker cp fichero_a_subir cloudera:/home/Cloudera/Documents
 
-4. Ejecutar Cloudera mediante docker run --hostname=quickstart.cloudera --privileges=true -t -i -p 8888:8888 -p 80:80 --name cloudera cloudera quickstart /usr/bin/docker-quickstart
+4. Ejecutar Cloudera mediante docker run --hostname=quickstart.cloudera --privileges=true -t -i -p 8888:8888 -p 80:80 
+--name cloudera cloudera quickstart /usr/bin/docker-quickstart
 
 5. Situados en la consola de Cloudera, instalar la librería mrjob mediante pip install mrjob
 
-6. Movernos hasta la ruta donde tenemos nuestros ficheros. Podremos realizar los pasos indicados en la primera parte del 4-6. 
+6. Movernos hasta la ruta donde tenemos nuestros ficheros. Podremos realizar los pasos indicados en la primera parte 
+del 4-6. 
