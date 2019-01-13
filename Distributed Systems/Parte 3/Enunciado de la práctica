@@ -1,0 +1,14 @@
+SPARK STREAMING + KAFKA
+
+Utilizando como base las herramientas presentadas en clase (productor y consumidor de Kafka genéricos en Python), 
+crear una aplicación local de Spark Streaming que lea progresivamente los tweets insertados en una cola de Kafka 
+identificada por el topic "Quatar_GP_2014", defina un intervalo de procesamiento de datos de 5 segundos y 
+realice las siguientes tareas:
+
+a) Calcular el número total de menciones recibidas por cada cuenta de usuario durante el intervalo de 5 segundos.
+b) Calcular la frecuencia total acumulada de apariciones de cada hashtag en el campo body, actualizando un ranking 
+con los 5 hashtags con mayor frecuencia de aparición.
+c) Calcular en una ventana temporal 20 segundos con offset de 10 segundos la frecuencia de aparición de cada uno de los 
+3 posibles tipos de tweets (TW-RT-MT).
+La práctica se resolverá en un archivo Python (.py) para ejecutar con spark-submit o un notebook para Jupyter (.ipynb), 
+utilizando pyspark.
