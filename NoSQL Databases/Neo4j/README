@@ -1,0 +1,14 @@
+EJECUCIÓN CON NEO4J
+1. Se obtiene el conjunto de datos "dblp.xml" según se indica en el enunciado y se guarda en la misma carpeta que 
+el resto de los ficheros .py dentro de la carpeta Neo4J proporcionada. 
+2. Se ejecuta el fichero "xml_to_csv.py".
+3. Se mueven los ficheros "authors.csv", "documents.csv", "AA_relationships.csv" y "AP_relationships.csv" a la carpeta 
+NEO4J/import, siendo NEO4J el path donde se encuentra almacenado el programa. 
+4. Se abre una terminal y se escribe el siguiente mandato para importar los ficheros necesarios, accediendo previamente 
+a la carpeta donde se encuentra el programa:
+bin\neo4j-admin import --mode csv --database practica.db --nodes import\authors.csv --nodes import\documents.csv 
+--relationships import\AA_relationships.csv --relationships import\AP_relationships.csv
+El nombre de la base de datos no debe existir previamente. 
+5. Se inicia neo4j en el terminal con "bin\neo4j console" desde la carpeta donde se encuentra el programa. 
+6. Se abre en el navegador la siguiente dirección: "http://localhost:7474/".
+7. Se realizan las consultas indicadas en el fichero "consultas_neo4j.txt"
