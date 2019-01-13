@@ -1,0 +1,10 @@
+tweetanalysis:
+  image: esterc94/cloud_tweetanalysis:latest
+  privileged: true
+  hostname: quickstart.cloudera
+  links: 
+    - db
+db:
+  image: mongo:3.0.2
+
+  
