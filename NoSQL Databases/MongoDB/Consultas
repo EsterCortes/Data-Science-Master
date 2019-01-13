@@ -1,0 +1,90 @@
+CONSULTA 1: Listado de todas las publicaciones de un autor determinado.
+
+db.dblp.find({"author.Author":"Paulina Golinska"},{"title":1}).pretty()
+
+CONSULTA 2: Número de publicaciones de un autor determinado.
+
+db.dblp.find({"author.Author":"Paulina Golinska"}).count()
+
+CONSULTA 3: Número de artículos en revista para el año 2017
+
+db.dblp.find({"type":"article","year":"2017"}).count()
+
+CONSULTA 4: Número de autores ocasionales, es decir, que tengan menos de 5 publicaciones en total
+
+db.dblp.aggregate([{$unwind:"$author"},
+		{$group:{"_id":"$author.Author","total":{$sum:1}}},
+		{$match:{"total":{"$lt":5}}},
+		{$count:"autores"}],		
+{allowDiskUse:true}).pretty()
+
+CONSULTA 5: Número de artículos de revista (article) y número de artículos en congresos (inproceedings) de 
+los diez autores con más publicaciones totales.
+
+ db.dblp.aggregate([{$unwind: "$author"},
+		{$group: {_id : "$author.Author","total":{$sum:1},"tipo":{$push:"$type"}}}, 
+		{$sort: {"total" :-1}},
+		{"$limit":10},
+		{$project:{"total":1,"tipo":1}},		
+		{$out:"tiposPublicaciones"}],	
+{allowDiskUse:true}).pretty()
+
+
+db.tiposPublicaciones.aggregate([
+        {$unwind:"$tipo"},
+        {$match:{$or:[{"tipo":"article"},{"tipo":"inproceedings"}]}}, 
+        {$group:{"_id":"$_id","TotalArticles":{$sum:{$cond:[ {$eq: ["$tipo","article"]},1,0]}},"TotalInproceedings":{$sum:{$cond:[ {$eq: ["$tipo","inproceedings"]},1,0]}}}},
+        {$sort:{"TotalArticles":-1}}],
+{allowDiskUse:true}).pretty()
+
+
+CONSULTA 6: Número medio de autores de todas las publicaciones que tenga en su conjunto de datos.
+
+db.dblp.aggregate([
+        {$group:{"_id":null,"TotalAutores":{$sum:{$size:"$author"}},"TotalPublicaciones":{$sum:1}}},
+        {$project:{"TotalAutores":1,"TotalPublicaciones":1,"Promedio":{$divide:["$TotalAutores","$TotalPublicaciones"]}}}],
+{allowDiskUse:true}).pretty()
+
+
+CONSULTA 7: Listado de coautores de un autor
+ 
+db.dblp.aggregate([{$match:{"author.Author":"Paulina Golinska"}},
+		 {$unwind:"$author"},
+		 {$group:{"_id":"$author.Author"}},
+		 {$match:{"_id":{"$ne":"Paulina Golinska"}}}]).pretty()
+
+
+CONSULTA 8: Edad de los 5 autores con un periodo de publicaciones más largo.
+
+db.dblp.aggregate([{$unwind:"$author"},
+		   {$group:{_id:"$author.Author","First":{$min:"$year"},"Last":{$max:"$year"}}},
+		   {$project:{"_id":1,"edad":{"$subtract":["$Last","$First"]}}},
+                   {$sort:{"edad":-1}},
+                   {$limit:5}],
+{allowDiskUse:true}).pretty() 
+
+Comprobamos, con una consulta sobre el autor de más edad, que el resultado es correcto:
+
+ db.dblp.find({"author.Author":"Alan M. Turing"},{"year":1}).pretty()
+
+
+CONSULTA 9: Número de autores novatos, es decir, que tengan una edad menor de 5 aÒos.
+
+db.dblp.aggregate([{$unwind:"$author"},
+		   {$group:{_id:"$author.Author","First":{$min:"$year"},"Last":{$max:"$year"}}},
+		   {$project:{"_id":1,"edad":{"$subtract":["$Last","$First"]}}},
+                   {$match:{"edad":{$lt:5}}},
+                   {$count:"Autores novatos"}],
+{allowDiskUse:true}).pretty()
+
+
+CONSULTA 10: Porcentaje de publicaciones en revistas con respecto al total de publicaciones.
+
+db.dblp.aggregate([
+            {$group:{"_id":"article","TotalArticles":{$sum:{$cond:[ {$eq: ["$type","article"]},1,0]}},"TotalPublicaciones":{$sum:1}}},
+            {$project:{
+                "TotalPublicaciones":1,
+                "TotalArticles":1,
+                "Proportion":{$multiply:[{$divide:["$TotalArticles","$TotalPublicaciones"]},100]}}}]).pretty()
+
+
