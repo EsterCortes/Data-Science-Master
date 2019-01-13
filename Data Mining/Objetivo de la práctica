@@ -1,4 +1,9 @@
 Objetivo de la práctica:
 
-Para esta práctica de minería de datos se pedía buscar un conjunto de datos, en este caso "Crimes of Chicago", plantear 
-una pregunta o problema a resolver y realizar un estudio completo sobre el dataset escogido para llegar a una conclusión. 
+Para esta práctica de minería de datos se pedía buscar un conjunto de datos, plantear una pregunta o problema a resolver 
+y realizar un estudio completo sobre el dataset escogido para llegar a una conclusión. 
+
+En nuestro caso escogimos el dataset "Crimes of Chicago".
+Enlace: https://www.kaggle.com/currie32/crimes-in-chicago 
+
+De este dataset tan grande, nos quedamos con los crímenes ocurridos entre 2012 y 2017. 
