@@ -1,0 +1,20 @@
+PRÁCTICA OBTENCIÓN DE DATOS
+
+ALUMNOS: PAULA CARBALLO PÉREZ Y ESTER CORTÉS GARCÍA
+
+Se entregan los siguientes ficheros:
+
+StationFacilities y StepFreeTubeGuideData, como resultado de bajarse los datos de las API's 
+https://api.tfl.gov.uk/tfl/syndication/feeds/stations-facilities.xml y 
+https://api.tfl.gov.uk/tfl/syndication/feeds/step-free-tube-guide.xml, respectivamente.
+
+StationFacilitiesNOH, fichero similar a StationFacilities, pero sin la etiqueta OpeningHours.
+
+StepFreeTubeNNone, fichero similar a StepFreeTubeGuideData, pero sin la información de las etiquetas AccessibilityType = None.
+
+Diagrama conceptual con la información de los ficheros de los apartados anteriores.
+
+TFLfacilities, fichero XML de la integración de los ficheros del apartado 2 y 3. Borrador_step es un fichero intermedio, 
+necesario para el control de estaciones que aparecen únicamente en uno de los xml y para crear TFLfacilities.
+
+RDF_XML, generado a partir de la información de TFLfacilities para la creación del grafo RDF.
