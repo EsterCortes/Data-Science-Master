@@ -1,0 +1,12 @@
+PRÁCTICA DE ANÁLISIS DE GRAFOS Y REDES SOCIALES
+
+Autoras: Paula Carballo Pérez y Ester Cortés García
+
+Se emplea la versión 1.9 de NetworkX y se visualiza en Google Chrome.
+
+practica_creategraph.py, se crea el grafo a partir de los datos obtenidos a través de la api de "Goodreads". Será necesario 
+poner en la variable "api_key" el valor de la api key de la persona que va a realizar las peticiones a la api.
+
+practica_graphmetrics, se aplican diversas métricas sobre el grafo generado en el primer script. 
+
+practica_visualizegraph, genera la visualización del grafo para el navegador Google Chrome. 
