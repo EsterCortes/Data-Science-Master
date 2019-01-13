@@ -1,0 +1,25 @@
+CONSULTA 1.- Número de publicaciones de cada autor
+
+MATCH (a:Author)-[r:Authorship]->(p:Document)
+RETURN a.name AS Author, count(p) AS Documents
+ORDER BY Documents DESC
+LIMIT 10
+
+CONSULTA 2.- Listado de publicaciones de un autor determinado
+
+MATCH (a:Author {name: "Paulina Golinska"})-[r:Authorship]->(p:Document)
+RETURN a.name AS Author, collect(p.title) AS Name 
+
+
+CONSULTA 3.- Coautores de un autor
+ 
+
+MATCH (a:Author {name: "Paulina Golinska"})-[r:Collaboration]->(a2:Author)
+RETURN a.name AS Author, collect(a2.name) AS Coauthors
+
+
+CONSULTA 4.- Número medio de autores de todas publicaciones del conjunto de datos
+ 
+MATCH (a:AutHor)-[r:Authorship]->(p:Document)
+WITH count(r) AS Authorship, count(DISTINCT p) AS Documents
+RETURN toFloat(Authorship)/Documents
