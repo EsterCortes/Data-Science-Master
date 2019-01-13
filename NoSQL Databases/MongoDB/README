@@ -1,0 +1,11 @@
+EJECUCIÓN CON MONGODB:
+1. Se obtiene el conjunto de datos "dblp.xml" según se indica en el enunciado y se guarda en la misma carpeta que el 
+resto de los ficheros .py dentro de la carpeta MongoDB proporcionada. 
+2. Se ejecuta el fichero "xml_to_json.py".
+3. Se inicia "mongod.exe" en el terminal, para ello será necesario situarse previamente en la carpeta bin dentro de 
+la carpeta del programa. 
+4. Se ejecuta el fichero "mongodb.py".
+5. Se inicia mongo.exe en un nuevo terminal, para ello será necesario situarse previamente en la carpeta bin dentro de 
+la carpeta del programa.
+6. Se accede a la base de datos practica con el comando "use practica".
+7. Se realizan las consultas indicadas en el fichero "consultas_mongodb.txt".
