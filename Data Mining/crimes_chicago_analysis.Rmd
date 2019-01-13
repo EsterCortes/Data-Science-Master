@@ -1,0 +1,910 @@
+---
+title: "Crímenes de Chicago"
+author: "Paula Carballo, Daniel Ciprián y Ester Cortés"
+date: "`r format(Sys.time(), '%d, %B, %Y')`"
+fontsize: 12pt
+output: pdf_document
+---
+
+
+#PRIMERA PARTE
+
+##Introducción
+
+En esta primera parte de la práctica queremos determinar cuántas comisarías hay que colocar en Chicago y dónde hay que colocarlas
+
+##Carga de paquetes
+
+En primer lugar, cargamos las librerías que vamos a necesitar para nuestro estudio.
+
+```{r warning=FALSE, message=FALSE}
+library(tidyverse)
+library(lubridate)
+library(cowplot)
+library(chron)
+library(MASS)
+library(imager)
+library(ROCR)
+library(cluster)
+library(randomForest)
+library(rpart)
+library(e1071)
+library(rattle)
+```
+
+
+##Tratamiento de los datos
+
+**1. Carga de los datos**
+
+```{r warning=FALSE, message=FALSE}
+Chicago <- read.csv("D:/Usuarios/Ester/Documents/entrega/crimes-in-chicago/Chicago_Crimes_2012_to_2017.csv")
+```
+
+
+```{r}
+df_Chicago <- Chicago
+head(df_Chicago)
+```
+
+
+**2. Resumen de las variables que conforman nuestros datos**
+
+1.- ID - Unique identifier for the record.
+
+2.- Case Number - The Chicago Police Department RD Number (Records Division Number), which is unique to the incident
+
+3.- Date - Date when the incident occurred. this is sometimes a best estimate.
+
+4.- Block - The partially redacted address where the incident occurred, placing it on the same block as the actual address.
+
+5.- IUCR - The Illinois Unifrom Crime Reporting code. This is directly linked to the Primary Type and Description.
+
+6.- Primary Type - The primary description of the IUCR code.
+
+7.- Description - The secondary description of the IUCR code, a subcategory of the primary description.
+
+8.- Location Description - Description of the location where the incident occurred.
+
+9.- Arrest - Indicates whether an arrest was made.
+
+10.- Domestic - Indicates whether the incident was domestic-related as defined by the Illinois Domestic Violence Act.
+
+11.- Beat - Indicates the beat where the incident occurred. A beat is the smallest police geographic area – each beat has a dedicated police beat car. Three to five beats make up a police sector, and three sectors make up a police district. The Chicago Police Department has 22 police districts. 
+
+12.- District - Indicates the police district where the incident occurred. 
+
+13.- Ward - The ward (City Council district) where the incident occurred. 
+
+14- Community Area - Indicates the community area where the incident occurred. Chicago has 77 community areas. 
+
+15.- FBI Code - Indicates the crime classification as outlined in the FBI's National Incident-Based Reporting System (NIBRS).
+
+16.- X Coordinate - The x coordinate of the location where the incident occurred in State Plane Illinois East NAD 1983 projection. This location is shifted from the actual location for partial redaction but falls on the same block.
+
+17.- Y Coordinate - The y coordinate of the location where the incident occurred in State Plane Illinois East NAD 1983 projection. This location is shifted from the actual location for partial redaction but falls on the same block.
+
+18.- Year - Year the incident occurred.
+
+19.- Updated On - Date and time the record was last updated.
+
+20.- Latitude - The latitude of the location where the incident occurred. This location is shifted from the actual location for partial redaction but falls on the same block.
+
+21.- Longitude - The longitude of the location where the incident occurred. This location is shifted from the actual location for partial redaction but falls on the same block.
+
+22.- Location - The location where the incident occurred in a format that allows for creation of maps and other geographic operations on this data portal. This location is shifted from the actual location for partial redaction but falls on the same block.
+
+
+**3. Estudio de los datos**
+
+Antes de empezar a trabajar con los datos es importante saber cómo están organizados los mismos, qué variables tenemos y cómo se almacenan.
+
+```{r warning=FALSE, message=FALSE}
+summary(df_Chicago)
+```
+
+**4. Observaciones**
+
+- La columna X la podemos eliminar porque no aporta información relevante para nuestro trabajo
+
+```{r warning=FALSE, message=FALSE}
+df_Chicago$X <- NULL
+```
+
+- La variable "Case.Number" debe se única para cada incidente y, sin embargo, vemos que se repite en varias ocasiones, por lo que eliminamos las filas con número de caso repetido.
+
+```{r}
+df_Chicago <- subset(df_Chicago, !duplicated(df_Chicago$Case.Number))
+```
+
+- Asimismo, la variable ID hace referencia al Case.Number por lo que podemos eliminarla. Lo mismo sucede con las variables IUCR y Primary.Type, por lo que nos quedaremos con Primary.Type y eliminaremos IUCR
+
+```{r}
+df_Chicago$ID <- NULL
+df_Chicago$IUCR <- NULL
+```
+
+- Las variables "X.Coordinate" e "Y.Coordinate" están relacionadas con "Latitude" y "Longitude", en tanto en cuanto que si realizamos una primera visualización de las mismas obtenemos un plano de Chicago.
+
+```{r warning=FALSE, message=FALSE}
+plot1 <- ggplot(df_Chicago[1:10000,]) + 
+  geom_point(aes(x=df_Chicago$X.Coordinate[1:10000],
+    y=df_Chicago$Y.Coordinate[1:10000]), color="light green")+ 
+  xlab("X.Coordinate")+ ylab("Y.Coordinate")+ 
+  theme(axis.text.x = element_text(size=10, angle=0),
+    axis.text.y = element_text(size=10, angle=0))
+plot2 <- ggplot(df_Chicago[1:10000,]) + 
+  geom_point(aes(x=df_Chicago$Longitude[1:10000],
+    y=df_Chicago$Latitude[1:10000]),color="Red")+ 
+  xlab("Longitude")+ ylab("Latitude")+ 
+  theme(axis.text.x = element_text(size=10, angle=0),
+    axis.text.y = element_text(size=10, angle=0))
+plot_grid(plot1,plot2)
+```
+
+Por tanto, podemos trabajar con las variables "X.Coordinate" y "Y.Coordinate".
+
+- La variable "Location" es un string, combinación de las variables "Latitude" y "Longitude"
+
+```{r warning=FALSE, message=FALSE}
+
+df_Chicago$Latitude <- NULL
+df_Chicago$Longitude <- NULL
+df_Chicago$Location <- NULL
+```
+
+- Tras haber eliminado esas tres variables, tenemos datos faltantes en las siguientes variables: 
+
+      - District
+      - Ward
+      - Community.Area
+      - X.Coordinate
+      - Y.Coordinate
+      
+Es en éstas últimas en las que hay más NA (37077 en cada una). Dado que tenemos 1456714 datos, el porcentaje de NA's está alrededor del 2%, que no es muy elevado por lo que podemos trabajar sin esos datos.
+
+```{r}
+df_Chicago <- na.omit(df_Chicago)
+```
+
+- Tenemos varias variables de localización, por lo que "Block" y "Beat" podemos eliminarlas, pues la información es redundante
+
+```{r}
+df_Chicago$Block <- NULL
+df_Chicago$Beat <- NULL
+```
+
+- La variable "Updated.On" tampoco nos aporta información relevante para nuestro estudio, por lo que también podemos prescindir de ella.
+
+```{r}
+df_Chicago$Updated.On <- NULL
+```
+
+- Unificar niveles dentro de la variable Primary.Type:
+
+El delito NON - CRIMINAL aparece de varias formas(3):
+
+```{r}
+df_Chicago$Primary.Type[which(df_Chicago$Primary.Type == 
+  "NON - CRIMINAL")] <- "NON-CRIMINAL"
+df_Chicago$Primary.Type[which(df_Chicago$Primary.Type == 
+  "NON-CRIMINAL (SUBJECT SPECIFIED)")] <- "NON-CRIMINAL"
+
+df_Chicago$Primary.Type <- factor(df_Chicago$Primary.Type, 
+  levels= c("ARSON","ASSAULT","BATTERY","BURGLARY",
+  "CONCEALED CARRY LICENSE VIOLATION","CRIM SEXUAL ASSAULT",
+  "CRIMINAL DAMAGE","CRIMINAL TRESPASS","DECEPTIVE PRACTICE","GAMBLING",
+  "HOMICIDE","HUMAN TRAFFICKING","INTERFERENCE WITH PUBLIC OFFICER",
+  "INTIMIDATION","KIDNAPPING","LIQUOR LAW VIOLATION","MOTOR VEHICLE THEFT",
+  "NARCOTICS","NON-CRIMINAL","OBSCENITY","OFFENSE INVOLVING CHILDREN",
+  "OTHER NARCOTIC VIOLATION","OTHER OFFENSE","PROSTITUTION",
+  "PUBLIC INDECENCY","PUBLIC PEACE VIOLATION","ROBBERY","SEX OFFENSE",
+  "STALKING","THEFT", "WEAPONS VIOLATION"))
+```
+
+- Asimismo, la variable FBI.Code no concuerda con la documentación e información proporcionada por el FBI(https://ucr.fbi.gov/nibrs/nibrs-user-manual), por lo que la eliminamos y creamos una nueva, según la citada documentación.
+
+Podemos clasificar los crímenes en 2 grupos principales:
+
+- Grupo A: Graves-muy graves
+- Grupo B: Delitos leves
+
+Analizamos la variable "Primary.Type" para ver qué tipos de delitos tenemos
+
+```{r}
+df_Chicago$FBI.Code <- NULL
+length(unique(df_Chicago$Primary.Type))
+Group_A <- c("HOMICIDE","ROBBERY","CRIM SEXUAL ASSAULT","ASSAULT","BURGLARY",
+  "SEX OFFENSE","BATTERY","THEFT","MOTOR VEHICLE THEFT",
+  "OFFENSE INVOLVING CHILDREN","DECEPTIVE PRACTICE","NARCOTICS","ARSON",
+  "WEAPONS VIOLATION","PROSTITUTION","KIDNAPPING","GAMBLING","STALKING",
+  "INTIMIDATION","OBSCENITY","CONCEALED CARRY LICENSE VIOLATION",
+  "HUMAN TRAFFICKING")
+Group_B <- c("CRIMINAL TRESPASS","CRIMINAL DAMAGE","PUBLIC PEACE VIOLATION",
+  "OTHER OFFENSE","INTERFERENCE WITH PUBLIC OFFICER","LIQUOR LAW VIOLATION",
+  "PUBLIC INDECENCY","NON-CRIMINAL","OTHER NARCOTIC VIOLATION")
+df_Chicago$Seriousness <- ifelse(df_Chicago$Primary.Type %in% Group_A, "A","B")
+```
+
+Hacemos una gráfica del número de crímenes de cada tipo
+
+```{r}
+qplot(df_Chicago$Seriousness, xlab = 'Seriousness', main ='Crimes in Chicago', 
+  fill="red") + scale_y_continuous('Number of crimes')
+```
+
+```{r}
+df_Chicago$Seriousness <- as.numeric(factor(df_Chicago$Seriousness, 
+  levels=c("A","B")))
+```
+
+**5.- Tratamiento de fechas y horas**
+
+La variable "Date" es de clase "factor" y el formato de en el que aparecen las fechas es del tipo "%m-%d-%Y %H:%M:%S AM/PM". Transformamos en una variable de clase Posixct y con un formato "%m-%d-%Y %H:%M:%S". 
+Aplicamos a ambos conjuntos de datos, aunque a partir de ahora trabajemos sólo con el primer conjunto.
+
+```{r warning=FALSE, message=FALSE}
+df_Chicago$Date <- mdy_hms(df_Chicago$Date)
+```
+
+Dividimos la columna "Date" en dos que serán "Day" y "Hour", y eliminamos la primera.
+
+```{r}
+df_Chicago$Day <- as.Date(df_Chicago$Date)
+df_Chicago$Hour <- times(format(df_Chicago$Date,"%H:%M:%S"))
+df_Chicago$Date <- NULL
+```
+
+Creamos dos nuevas variables "Weekday" y "Time_slot", que nos permiten trabajar mejor para hacer el modelo.
+
+```{r}
+df_Chicago$Nameday <- weekdays(df_Chicago$Day, abbreviate= FALSE)
+
+time.tag <- chron(times= c('00:00:00', '08:00:00', '16:00:00','23:59:00'))
+df_Chicago$Time_slot <- cut(df_Chicago$Hour, breaks= time.tag, 
+  labels= c('noche','mañana','tarde'), include.lowest=TRUE)
+```
+
+##Determinación del número de comisarías 
+
+El primer objetivo de nuestro estudio es determinar el número de comisarías que es necesario en Chicago para absorber el número de delitos que se producen.
+
+Puesto que tenemos el tipo de delito y sabemos si el delicuente ha sido o no arrestado, calculamos la probabilidad de arresto para cada tipo de delito.
+
+```{r}
+z=table(df_Chicago$Primary.Type,df_Chicago$Arrest)
+p=z[,2]/apply(z,1,sum)
+sort(p)
+```
+
+Dividimos en 3 categorías, según la probabilidad de ser arrestado en función del Primary.Type del delito (ej: Public Indecency te garantiza el arresto)
+
+  - Prob. baja <15%
+  - Prob. media 15%<p<70%
+  - Prob.alta >70%
+
+```{r}
+length(unique(df_Chicago$Primary.Type))
+
+Alto <- c("CONCEALED CARRY LICENSE VIOLATION","GAMBLING",
+  "INTERFERENCE WITH PUBLIC OFFICER","LIQUOR LAW VIOLATION","NARCOTICS",
+  "OBSCENITY","OTHER NARCOTIC VIOLATION","PUBLIC PEACE VIOLATION",
+  "CRIMINAL TRESPASS","PROSTITUTION","PUBLIC INDECENCY","WEAPONS VIOLATION")
+
+Medio <- c("ASSAULT","BATTERY","HOMICIDE","INTIMIDATION",
+  "OFFENSE INVOLVING CHILDREN","OTHER OFFENSE","SEX OFFENSE","STALKING")
+
+Bajo <- c("ARSON","BURGLARY","CRIM SEXUAL ASSAULT","CRIMINAL DAMAGE",
+  "DECEPTIVE PRACTICE","HUMAN TRAFFICKING","KIDNAPPING","MOTOR VEHICLE THEFT",
+  "NON-CRIMINAL","ROBBERY","THEFT")
+```
+
+Ahora creamos una nueva columna/variable que se llame "prob.arr_vs_type"
+
+```{r}
+df_Chicago$Arrest_probability <- df_Chicago$Primary.Type
+
+df_Chicago$Arrest_probability <-ifelse(df_Chicago$Primary.Type %in% Alto, 
+  "Alto",df_Chicago$Arrest_probability)
+df_Chicago$Arrest_probability <-ifelse(df_Chicago$Primary.Type %in% Medio, 
+  "Medio",df_Chicago$Arrest_probability)
+df_Chicago$Arrest_probability <-ifelse(df_Chicago$Primary.Type %in% Bajo, 
+  "Bajo",df_Chicago$Arrest_probability)
+```
+
+```{r}
+#Grafico Nº de Crimenes segun el % de ser arrestado
+df_Chicago$Arrest_probability <- factor(df_Chicago$Arrest_probability, 
+  levels=c("Bajo","Medio","Alto"))
+qplot(df_Chicago$Arrest_probability, xlab = 'Arrest_probability', 
+  main ='Crimes in Chicago', fill="red") + scale_y_continuous('Number of crimes')
+```
+
+Para nuestros cálculos, cambiamos los niveles de la probabilidad a numérico
+
+```{r}
+df_Chicago$Arrest_probability <- as.numeric(factor(df_Chicago$Arrest_probability, 
+  levels=c("Bajo","Medio","Alto")))
+```
+
+Queremos determinar el número de comisarías que son necesarias en Chicago. Para ello utilizaremos un algoritmo de clúster jerárquico.
+
+Vamos a realizar un muestreo con nuestros datos y crearemos 2 matrices de similaridad: una para las distancias y otra para la probabilidad de arresto.
+
+***Matriz de similaridad para las distancias***
+
+
+Nos quedamos con las variables X.Coordinate, Y.Coordinate y Ward. Esta última variable es una variable de localización geográfica (numérica) que hace referencia a una subdivisión municipal, independiente de las divisiones policiales. Empleamos esta para intentar obtener un clúsuter desvinculado de las localizaciones o divisiones policiales que nos proporciona el dataset.
+
+```{r}
+dim(df_Chicago)
+set.seed(1)
+ind=sample(1:1419482, 500)
+chicagotest <- df_Chicago[,c("Ward","X.Coordinate","Y.Coordinate")]
+chicago.cl=chicagotest[ind,1:3]
+chicago.cl <- scale(chicago.cl)
+etiquetas=chicagotest[ind,1]
+dist1 <- dist(chicago.cl,method = "euclidean")
+h1 <- hclust(dist1,method = "complete")
+plot(h1, labels=etiquetas, cex=0.7)
+groups <- cutree(h1, k=25)
+rect.hclust(h1, k=25, border="red")
+```
+
+***Matriz de similaridad para la probabilidad de arresto***
+En este caso nos quedamos con dos de las variables nuevas que hemos creado, la gravedad del delito de acuerdo a la clasificación del FBI ("Seriousness") y la probabilidad de arresto según el tipo de delito ("Arrest_probability").
+
+```{r}
+
+ind=sample(1:1419482, 500)
+chicagotest2 <- df_Chicago[,c("Seriousness", "Arrest_probability")]
+chicago.cl2=chicagotest2[ind,1:2]
+etiquetas2=chicagotest2[ind,1]
+dist2 <- dist(chicago.cl2,method = "euclidean")
+h2 <- hclust(dist2,method = "complete")
+plot(h2, labels=etiquetas2, cex=0.7)
+groups <- cutree(h1, k=25)
+rect.hclust(h1, k=25, border="red")
+
+```
+
+Normalizamos las matrices:
+
+```{r}
+S <- function(x){(x-min(x))/(max(x)-min(x))}
+
+S1 <- as.dist(apply(as.matrix(dist1),2 , S))
+
+S2 <- as.dist(apply(as.matrix(dist2),2 , S))
+```
+
+Una vez hemos normalizado las matrices, asignamos peso a cada una de ellas. Consideramos que la localización debe tener un mayor peso que la probabilidad de arresto.
+
+```{r}
+S3 <- S1*0.9 + S2*0.1
+h3 <- hclust(S3,method = "complete")
+plot(h3, labels=etiquetas,cex=0.7)
+groups <- cutree(h3, k=25)
+rect.hclust(h3, k=25, border="red")
+
+```
+
+Distribuimos las 25 comisarías de acuerdo al clúster.
+
+```{r} 
+comisarias_estimadas <- load.image("comisarías_estimadas.png")
+comisarias_reales <- load.image("comisarías_reales.PNG")
+
+plot(comisarias_estimadas)
+plot(comisarias_reales)
+```
+
+#SEGUNDA PARTE
+
+##MODELO PARA LA PREDICCIÓN DEL ARRESTO
+
+Dado que el conjunto de datos que tenemos es muuy grande, dIvidimos en dos grupos:
+
+- años de 2012 a 2014
+- años de 2015 a 2016
+
+```{r}
+df_Chicago1 <- df_Chicago %>% filter(Year >= "2012" & Year <= "2014")
+df_Chicago2 <- df_Chicago %>% filter(Year == "2015" | Year == "2016")
+```
+
+
+Y trabajaremos con el segundo de ellos, pues su peso es menor y es más cómodo para trabajar.
+
+***1. Limpieza de datos***
+
+Eliminamos las variables que no vamos a necesitar
+
+```{r}
+drop2 <- c("Case.Number", "Primary.Type","Description","Location.Description",
+           "Ward","Community.Area","X.Coordinate","Y.Coordinate",
+           "Arrest_probability","Hour")
+df_Chicago2 <- df_Chicago2[, !(names(df_Chicago2) %in% drop2)]
+
+```
+
+
+División según las comisarías:
+
+```{r}
+North <- c("11","14","15","16","17","19","20","24","25","31")
+Central <- c("1","2","3","8","9","10","12","18")
+South <- c("4","5","6","7","22")
+
+df_Chicago2$District<-ifelse(df_Chicago2$District  %in% North, "North",
+                             df_Chicago2$District)
+df_Chicago2$District<- ifelse(df_Chicago2$District  %in% Central, "Central",
+                              df_Chicago2$District)
+df_Chicago2$District<- ifelse(df_Chicago2$District  %in% South, "South",
+                              df_Chicago2$District)
+```
+
+
+Trabajamos con meses y días:
+
+```{r}
+Weekday <- c("lunes","martes","miércoles","jueves","viernes")
+Weekend <- c("sábado","domingo")
+
+df_Chicago2$Is.weekend <-ifelse(df_Chicago2$Nameday  %in% Weekday, "False","True")
+```
+
+
+```{r}
+df_Chicago2$Month <- months(df_Chicago2$Day)
+
+primero <- c("enero","febrero","marzo")
+segundo <- c("abril","mayo","junio")
+tercero <- c("julio","agosto","septiembre")
+cuarto <- c("octubre","noviembre","diciembre")
+
+df_Chicago2$Trimestre <-ifelse(df_Chicago2$Month  %in% primero, "1º"," ")
+df_Chicago2$Trimestre <-ifelse(df_Chicago2$Month  %in% segundo, "2º",
+                               df_Chicago2$Trimestre)
+df_Chicago2$Trimestre <-ifelse(df_Chicago2$Month  %in% tercero, "3º",
+                               df_Chicago2$Trimestre)
+df_Chicago2$Trimestre <-ifelse(df_Chicago2$Month  %in% cuarto, "4º",
+                               df_Chicago2$Trimestre)
+```
+
+
+Ya tenemos nuestro dataframe definitivo, por lo que ya podemos empezar a aplicar modelos.
+
+Análisis descriptivo de los datos.
+
+En primer lugar, transformamos en factores aquellas variables que no lo son. Y con la variable Arrest, reordenamos los factores, de forma que TRUE sea "1" y FALSE sea "2".
+
+
+```{r}
+levels(df_Chicago2$Arrest) <- c("2","1")
+df_Chicago2$District <- as.factor(df_Chicago2$District)
+df_Chicago2$Year <- as.factor(df_Chicago2$Year)
+df_Chicago2$Seriousness <- as.factor(df_Chicago2$Seriousness)
+df_Chicago2$Nameday <- as.factor(df_Chicago2$Nameday)
+df_Chicago2$Is.weekend <- as.factor(df_Chicago2$Is.weekend)
+df_Chicago2$Month <- as.factor(df_Chicago2$Month)
+df_Chicago2$Trimestre <- as.factor(df_Chicago2$Trimestre)
+summary(df_Chicago2)
+```
+
+Comprobamos si los datos están desequilibrados con respecto al arresto (TRUE=1 FALSE=2), que es la variable que queremos predecir.
+
+
+```{r}
+table(df_Chicago2$District,df_Chicago2$Arrest)
+table(df_Chicago2$Domestic,df_Chicago2$Arrest)
+table(df_Chicago2$Year,df_Chicago2$Arrest)
+table(df_Chicago2$Seriousness,df_Chicago2$Arrest)
+table(df_Chicago2$Nameday,df_Chicago2$Arrest)
+table(df_Chicago2$Time_slot,df_Chicago2$Arrest)
+table(df_Chicago2$Is.weekend,df_Chicago2$Arrest)
+table(df_Chicago2$Month,df_Chicago2$Arrest)
+table(df_Chicago2$Trimestre,df_Chicago2$Arrest)
+```
+
+
+Dividimos nuestro conjunto de datos en "train" y "test"
+
+
+```{r}
+n_data=dim(df_Chicago2)[1]
+n_train=round(0.7*n_data)
+n_test=n_data-n_train
+
+# Índices sobre los que vamos a muestrear
+
+indices=1:n_data
+indices_train= sample(indices,n_train)
+indices_test=indices[-indices_train]
+```
+
+Construimos los dos conjuntos
+
+```{r}
+
+Chicago_train=df_Chicago2[indices_train,]
+Chicago_test=df_Chicago2[indices_test,]
+```
+
+Nuestro objetivo es crear un modelo de predicción del arresto. 
+
+```{r}
+summary(Chicago_train)
+```
+
+
+En primer lugar, antes de aplicar ningún modelo, definimos una función para dibujar la curva ROC.
+
+```{r}
+rocplot = function(pred, truth, ...) {
+predob = prediction(pred, truth)
+perf = performance(predob, "tpr", "fpr")
+auc = as.numeric(performance(predob,"auc")@y.values)
+plot(perf, main= paste("Area=",round(auc,2),...))
+}
+```
+
+
+***2. Regresión logística***
+
+Creamos varios modelos, probando con distintas variables. Para cada uno de ellos dibujaremos su curva ROC correspondiente, lo que nos ayudará a determinar cuál es el más adecuado.
+
+En primer lugar, creamos un modelo en el que usaremos las variables "Nameday" y "Month", sin tener en cuenta si son o no fin de semana y sin agrupar por trimestres.
+
+```{r}
+modelarrest1 <- glm(Arrest ~ Domestic + District + Year + Seriousness + 
+                      Nameday + Time_slot + Month, 
+                      family = binomial,data = Chicago_train)
+summary(modelarrest1)
+
+fitted_log1 <- predict(modelarrest1, Chicago_train, decision.values = TRUE)
+
+rocplot(fitted_log1, Chicago_train[,"Arrest"])
+```
+
+
+Probamos ahora con los meses agrupados por trimestre y los días de la semana en función de si es o no fin de semana.
+
+```{r}
+modelarrest2 <- glm(Arrest ~ Domestic + District + Year + Seriousness +
+                      Is.weekend + Time_slot + Trimestre, 
+                    family = binomial,data = Chicago_train)
+summary(modelarrest2)
+
+fitted_log2 <- predict(modelarrest2, Chicago_train, decision.values = TRUE)
+
+rocplot(fitted_log2, Chicago_train[,"Arrest"])
+
+```
+
+
+Puesto que en el primer modelo vemos que el lunes es un día significativo para el arresto, y que en el 2º modelo se ve que el fin de semana no lo es, hacemos un tercer modelo combinando ambos resultados.
+
+```{r}
+modelarrest3 <- glm(Arrest ~ Domestic + District + Year + Seriousness + 
+                      (Nameday == "lunes") + Time_slot + Trimestre, 
+                    family = binomial,data = Chicago_train)
+summary(modelarrest3)
+
+fitted_log3 <- predict(modelarrest3, Chicago_train, decision.values = TRUE)
+
+rocplot(fitted_log3, Chicago_train[,"Arrest"])
+
+```
+
+
+Probamos sin Seriousness y sin lunes
+
+```{r}
+modelarrest4 <- glm(Arrest ~ Domestic + District + Year + + Time_slot + 
+                      Trimestre, family = binomial,data = Chicago_train)
+summary(modelarrest4)
+
+fitted_log4 <- predict(modelarrest4, Chicago_train, decision.values = TRUE)
+
+rocplot(fitted_log4, Chicago_train[,"Arrest"])
+
+```
+
+
+Comprobamos el último modelo con los datos de test
+
+```{r}
+modelarrest_test <- glm(Arrest ~ Domestic + District + Year + 
+                     + Time_slot + Trimestre, family = binomial,data = Chicago_test)
+summary(modelarrest_test)
+
+fitted_logtest <- predict(modelarrest_test, Chicago_test, decision.values = TRUE)
+par(mfrow = c(1, 2))
+rocplot(fitted_logtest, Chicago_test[,"Arrest"])
+
+```
+
+
+Hemos localizado las variables más adecuadas para predecir el arresto. Sin embargo, como se puede ver en la curva ROC, el área bajo la curva es muy pequeña, por lo que no es el modelo más apropiado para nuestros datos.
+
+
+
+***3. Modelo K-means y PCA**
+
+En primer lugar seleccionamos las variables con las que vamos a trabajar, eliminando nuestra variable objetivo, ya que posteriormente, lo interesante será observar cómo se distribuye ésta en cada uno de los clústers obtenidos.
+Previamente, hemos tenido que transformar todas nuestras variables cualitativas a cuantitativas debido a que k-means trabaja con este último tipo de variables.
+
+
+```{r}
+df_Chicago3<- subset(df_Chicago2, select=c("District","Domestic","Seriousness",
+                                           "Year","Time_slot","Is.weekend", 
+                                           "Trimestre"))
+df_Chicago3$District<-as.numeric(df_Chicago3$District)
+df_Chicago3$Domestic<-as.numeric(df_Chicago3$Domestic)
+df_Chicago3$Year<-as.numeric(df_Chicago3$Year)
+df_Chicago3$Time_slot<-as.numeric(df_Chicago3$Time_slot)
+df_Chicago3$Is.weekend<-as.numeric(df_Chicago3$Is.weekend)
+df_Chicago3$Trimestre<-as.numeric(df_Chicago3$Trimestre)
+df_Chicago3$Seriousness<-as.numeric(df_Chicago3$Seriousness)
+```
+
+
+Además, conviene trabajar con una muestra (10k) ya que el dataset es muy pesado.
+
+```{r}
+summary(df_Chicago3)
+set.seed(1)
+datos.st <- df_Chicago3[sample(1:nrow(df_Chicago3), 10000,replace=FALSE),]
+
+dim(datos.st)
+ 
+n = dim(datos.st)[1] #Número de Crímenes
+p = dim(datos.st)[2] #Número de variables
+```
+
+
+
+Para elegir el número de clústers óptimo, lo que haremos será calcular la variabilidad dentro de los grupos para distintas ejecuciones de la función kmeans. En concreto, ejecutamos la función kmeans para un número de entre 2 y 15 clusters, y elegimos el número de clústers que proporcione descenso en la variabilidad y, a la vez, un número de
+clústers no demasiado grande. Para ello generamos un vector, que denominaremos SSW con las sumas de las varianzas dentro de los grupos que se obtienen después de cada ejecución del método, y lo representamos gráficamente. 
+
+```{r}
+#Inicializamos el vector
+SSW <- vector(mode = "numeric", length = 15)
+#Variabilidad de todos los datos
+SSW[1] <- (n - 1) * sum(apply(datos.st,2,var))
+#Variabilidad de cada modelo
+for (i in 2:15) SSW[i] <- sum(kmeans(datos.st,centers=i,nstart=25)$withinss)
+plot(1:15, SSW, type="b", xlab="Number of Clusters", 
+     ylab="Sum of squares within groups",pch=19, col="steelblue4")
+```
+
+A continuación, tras utilizar el método de Elbow, gráficamente no observamos una elección clara, por lo que deberíamos probar con varias opciones. Probamos con 6 grupos y 25 arranques:
+
+```{r}
+clusters6.datos <- kmeans(datos.st, 6, nstart = 25)
+centroides<-aggregate(datos.st,by=list(clusters6.datos$cluster),FUN=mean) 
+```
+
+***Reducción de la dimensionalidad:***
+
+PCA y gráfico con las dos primeras componentes
+
+```{r}
+ # Guardamos el vector con cada cluster
+datos.clusters6 <- clusters6.datos$cluster
+# PCA
+clusplot(datos.st, datos.clusters6, color=TRUE, shade=TRUE,labels=0,lines=0)
+```
+
+***Filtros***
+Tras trabajar con los datos en bruto, hemos realizado unos filtros según los inconvenientes que nos hemos encontrado:
+
+-	Selección de una muestra: la distancia euclídea no es método adecuado para agrupar en nuestro caso y acumula la gran mayoría de datos en un solo clúster.
+-	Selección de la Zona Norte: buscamos para un área más específica, posibles resultados interesantes.
+
+```{r}
+set.seed(1)
+df_chicnorte <- df_Chicago3 %>% filter(District == "2")
+df_chicnorte <- subset(df_chicnorte, select=c("Domestic","Seriousness",
+                                              "Year","Time_slot","Is.weekend", 
+                                              "Trimestre"))
+datos.st.norte <- df_chicnorte[sample(1:nrow(df_chicnorte), 10000,replace=FALSE),]
+
+dim(datos.st.norte)
+ 
+n2 = dim(datos.st.norte)[1] #Número de Crímenes
+p2 = dim(datos.st.norte)[2] #Número de variables
+```
+
+
+***Gráfico de Elbow II***
+
+```{r}
+ #Inicializamos el vector
+SSW <- vector(mode = "numeric", length = 15)
+#Variabilidad de todos los datos
+SSW[1] <- (n2 - 1) * sum(apply(datos.st.norte,2,var))
+#Variabilidad de cada modelo
+for (i in 2:15) SSW[i] <- sum(kmeans(datos.st.norte,centers=i,nstart=25)$withinss)
+plot(1:15, SSW, type="b", xlab="Number of Clusters", 
+     ylab="Sum of squares within groups",pch=19, col="steelblue4")
+```
+
+
+***Cluster***
+
+Se escogen 6 grupos y 25 arranques diferentes. El modelo y los centroides correspondientes se 
+pueden ver a continuación:
+
+```{r}
+clusters6.datos.norte <- kmeans(datos.st.norte, 6, nstart = 25)
+centroides <-aggregate(datos.st.norte,by=list(clusters6.datos.norte$cluster),
+                       FUN=mean) 
+```
+
+
+***Reducción de la dimensionalidad II***
+
+Aplicamos PCA para el caso de 6 Clusters y los filtros anteriores aplicados, con el objetivo de describir los datos en términos de nuevas variables. Se observa claramente como hay un clúster (verde) que destaca en la parte superior, pero los demás también quedan definidos de forma apilada (grafico para representar las dos primeras componentes agrupando según los clusters obtenidos previamente).
+
+```{r}
+datos.clusters6.norte <- clusters6.datos.norte$cluster
+clusplot(datos.st.norte, datos.clusters6.norte, color=TRUE, shade=TRUE,
+         labels=0,lines=0)
+```
+
+
+
+En general, esto nos aporta un abanico enorme de líneas de investigación.
+-	Deberiamos aplicar los métodos anteriores por cada una de las áreas definidas (Norte, Sur, o bien por distrito)
+-	Ademas, conviene realizar el punto anterior segmentando por año.
+
+
+
+***4. Árbol de decisión***
+
+
+```{r}
+forest_arrest1 <- rpart(as.numeric(Arrest) ~ ., data = Chicago_train)
+summary(forest_arrest1)
+par(mfrow = c(1, 2))
+fancyRpartPlot(forest_arrest1, sub = "")
+```
+
+
+```{r}
+forest_arrest2 <- rpart(as.numeric(Arrest) ~  Month, data = Chicago_train)
+summary(forest_arrest2)
+par(mfrow = c(1, 2))
+fancyRpartPlot(forest_arrest2, sub = "")
+```
+
+```{r}
+forest_arrest3 <- rpart(as.numeric(Arrest) ~ Domestic + District + Year +
+                     + Time_slot + Trimestre, data = Chicago_train)
+summary(forest_arrest3)
+par(mfrow = c(1, 2))
+fancyRpartPlot(forest_arrest3, sub = "")
+```
+
+
+
+Como se ve claramente en los 3 modelos, este método no es adecuado para el dataset que tenemos, pues en todos ellos se genera un único nodo. Puede deberse a que los datos no están desequilibrados.
+
+
+
+***5. SVM***
+
+Puesto que nuestro dataset es muy grande, tenemos que coger una muestra. Lo que haremos será coger una muestra del conjunto de datos de entrenamiento, y después validaremos el modelo con una muestra del conjunto de datos de test.
+
+```{r}
+set.seed(1)
+muestra_modelo <- Chicago_train[sample(1:nrow(Chicago_train),10000,
+                                       replace = FALSE),]
+```
+
+Realizamos un primer modelo de acuerdo a los que hemos aplicado con los métodos anteriores.
+
+
+```{r}
+svmfit.opt = svm(Arrest ~ ., data =  muestra_modelo, kernel = "linear",
+                 gamma = 1, cost = 1, decision.values = T,
+                 type = "C-classification")
+fitted = attributes(predict(svmfit.opt, muestra_modelo, 
+                            decision.values = TRUE))$decision
+summary(svmfit.opt)
+par(mfrow = c(1, 2))
+rocplot(fitted, muestra_modelo[,"Arrest"])
+
+```
+
+Cambiamos el valor de gamma y de cost
+
+```{r}
+svmfit.opt2 = svm(Arrest ~ ., data =  muestra_modelo, kernel = "linear",
+                  gamma = 10, cost = 10, decision.values = T,
+                  type = "C-classification")
+fitted2 = attributes(predict(svmfit.opt2, muestra_modelo, 
+                             decision.values = TRUE))$decision
+summary(svmfit.opt2)
+par(mfrow = c(1, 2))
+rocplot(fitted2, muestra_modelo[,"Arrest"])
+
+```
+
+
+Modificamos ahora el tipo de kernel
+
+```{r}
+svmfit.opt3 = svm(Arrest ~ ., data =  muestra_modelo, kernel = "radial"
+                  ,gamma = 1, cost = 1, decision.values = T,
+                  type = "C-classification")
+fitted3 = attributes(predict(svmfit.opt3, muestra_modelo, 
+                             decision.values = TRUE))$decision
+summary(svmfit.opt3)
+par(mfrow = c(1, 2))
+rocplot(fitted3, muestra_modelo[,"Arrest"])
+
+```
+
+
+
+Al igual que en el caso anterior, cambiamos los valores de gamma y cost
+
+```{r}
+svmfit.opt4 = svm(Arrest ~ ., data =  muestra_modelo, kernel = "radial",
+                  gamma = 10, cost = 10, decision.values = T,
+                  type = "C-classification")
+fitted4 = attributes(predict(svmfit.opt4, muestra_modelo, 
+                             decision.values = TRUE))$decision
+summary(svmfit.opt4)
+par(mfrow = c(1, 2))
+rocplot(fitted4, muestra_modelo[,"Arrest"])
+
+```
+
+Vemos que, en ambos casos, funciona mejor gamma = 10 y cost = 10, que cuando su valor es 1.
+
+
+Por otro lado, a la hora de hacer este modelo, estamos considerando todas las variables. Realizamos ahora el modelo con las variables elegidas en el modelo de regresión logística que mejor funcionaba.
+
+```{r}
+svmfit.opt5 = svm(Arrest ~ Domestic + District + Year ++ Time_slot + Trimestre,
+                  data =  muestra_modelo, kernel = "radial",gamma = 10, 
+                  cost = 10, decision.values = T,type = "C-classification")
+fitted5 = attributes(predict(svmfit.opt5, muestra_modelo, 
+                             decision.values = TRUE))$decision
+summary(svmfit.opt5)
+par(mfrow = c(1, 2))
+rocplot(fitted5, muestra_modelo[,"Arrest"])
+
+```
+
+
+Vemos que con éste último no mejoramos los resultados obtenidos con el anterior. Lo probamos, por tanto, con una muestra del conjunto de test.
+
+```{r}
+set.seed(1)
+muestra_modelo_test <- Chicago_test[sample(1:nrow(Chicago_test),10000,
+                                           replace = FALSE),]
+```
+
+```{r}
+svmfit.opt_test = svm(Arrest ~ ., data =  muestra_modelo_test, 
+                      kernel = "radial",gamma = 10, cost = 10, 
+                      decision.values = T,type = "C-classification")
+fitted_test = attributes(predict(svmfit.opt_test, muestra_modelo_test, 
+                                 decision.values = TRUE))$decision
+summary(svmfit.opt_test)
+par(mfrow = c(1, 2))
+rocplot(fitted_test, muestra_modelo_test[,"Arrest"])
+```
+
+
+##CONCLUSIONES
+
+A la vista de los resultados obtenidos al aplicar distintos modelos de predicción a nuestros datos, podemos que el modelo que mejor se adapta son los SVM. No es posible aplicar otros modelos, como random forest, y otros nos dan unos resultados poco favorables para nuestra predicción del arresto.
+
+
+
