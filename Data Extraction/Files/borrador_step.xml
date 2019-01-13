@@ -1,0 +1,4901 @@
+<Stations xmlns="ELRAD" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="ELRAD ENHANCED_LRAD_v1.3.xsd">
+  <Header>
+    <Identifier>TfL | Step-Free Tube Guide with all Toilets-ELRAD</Identifier>
+    <DisplayTitle>TfL | Step-Free Tube Guide with all Toilets-ELRAD</DisplayTitle>
+    <Version>2014082201</Version>
+    <PublishDateTime canonical="2014-08-22T00:00:00Z">Fri,22 Aug 2014 00:00:00</PublishDateTime>
+    <Author>webteam@tfl.gov.uk</Author>
+    <Owner>Transport for London</Owner>
+    <RefreshRate>129600</RefreshRate>
+    <Max_Latency>129600</Max_Latency>
+    <TimeToError>129600</TimeToError>
+    <OverrideMessage />
+    <ErrorMessage />
+    <FeedInfo>First version of ELRAD feed for developers</FeedInfo>
+    <Attribution>
+      <Url>http://www.tfl.gov.uk</Url>
+      <Text>copyright TfL</Text>
+      <TermsAndConditions>This feed is subject to TfL terms and conditions</TermsAndConditions>
+      <TermsAndConditionsUrl>http://www.tfl.gov.uk/termsandconditions/11402.aspx</TermsAndConditionsUrl>
+    </Attribution>
+    <Language>en</Language>
+  </Header>
+  <Station>
+    <StationName>Abbey Road</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>Yes</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>Yes</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>DLR</LineName>
+        <Platform />
+        <Direction />
+        <DirectionTowards />
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp>No</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Southbound</Description>
+        <NaptanID>9400ZZDLABR1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Northbound</Description>
+        <NaptanID>9400ZZDLABR2</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Acton Central</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>Yes</SpecificEntranceRequired>
+        <SpecificEntranceInstructions>You must use the correct entrance/exit  depending on which platform you are travelling to and from as you cannot change step-free between platforms within the station. Use the Church&#64257;eld Road entrance via the ticket hall for platform 2. Use the entrance on the other side of the level crossing for platform 1</SpecificEntranceInstructions>
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Richmond</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Stratford</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900ACTNCTL1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Anerley</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>Yes</SpecificEntranceRequired>
+        <SpecificEntranceInstructions>You must use the correct  entrance/exit depending on which platform you are travelling to and from as you cannot change  step-free between platforms within the station.  Use the Ridsdale Road entrance for platform 1.  Use the Anerley Station Road entrance for  platform 2</SpecificEntranceInstructions>
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Dalston Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>West Croydon</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900ANERLEY1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900ANERLEY2</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Brockley</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation>You can only enter and exit platform 2 towards Crystal Palace and West Croydon </AdditionalAccessibilityInformation>
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Partial</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Crystal Palace and West Croydon</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900BROCKLY1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Bromley-by-Bow</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900ZZLUBBB1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900ZZLUBBB2</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Brondesbury</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900BRBY1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Brondesbury Park</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900BRBYPK1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Bushey</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>2100BUSHEY0</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Caledonian Road &amp; Barnsbury</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Richmond and Clapham Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>3</Platform>
+        <Direction />
+        <DirectionTowards>Stratford</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900CLDNNRB1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Camden Road</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Richmond and Clapham Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Stratford</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900CMDNRD1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Canonbury</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Highbury &amp; Islington</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Crystal Palace and Clapham Junction via Canada Water</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>3</Platform>
+        <Direction />
+        <DirectionTowards>Richmond and Clapham Junction via Willesden Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>4</Platform>
+        <Direction />
+        <DirectionTowards>Stratford</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900CNNB1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Carpenders Park</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Euston</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Watford Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>2100CRPNDPK0</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Clapham High Street</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description />
+        <NaptanID />
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Clapham Junction</StationName>
+    <PublicToilet Exists="Yes">
+      <Location>In Brighton Yard ticket hall</Location>
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>Yes</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>Partial</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Stratford via Willesden Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Highbury &amp; Islington via Canada Water</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900CLPHMJ21</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900CLPHMJ22</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 3</Description>
+        <NaptanID>4900CLPHMJ23</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Crossharbour</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>Yes</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>DLR</LineName>
+        <Platform />
+        <Direction />
+        <DirectionTowards />
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>9400ZZDLCLA1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Crouch Hill</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900CROUCHH1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Crystal Palace</StationName>
+    <PublicToilet Exists="Yes">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>2</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>Yes</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>Partial</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>3</Platform>
+        <Direction />
+        <DirectionTowards>Highbury &amp; Islington</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>5</Platform>
+        <Direction />
+        <DirectionTowards>Highbury &amp; Islington</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900CRYSTLP1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Custom House for ExCeL</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>9400ZZDLCUS1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Cutty Sark for Maritime Greenwich</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>Yes</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>DLR</LineName>
+        <Platform />
+        <Direction />
+        <DirectionTowards />
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>9400ZZDLCUT1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Dalston Junction</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Highbury &amp; Islington</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>New Cross, Clapham Junction, Crystal Palace and West Croydon</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>3</Platform>
+        <Direction />
+        <DirectionTowards>New Cross, Clapham Junction, Crystal Palace and West Croydon</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>4</Platform>
+        <Direction />
+        <DirectionTowards>New Cross, Clapham Junction, Crystal Palace and West Croydon</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900DALS1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Dalston Kingsland</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900DALSKLD1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Denmark Hill</StationName>
+    <PublicToilet Exists="Yes">
+      <Location>Accessible toilets behind ticket office</Location>
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description />
+        <NaptanID />
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Edgware Road</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation>The Circle line no longer runs in a continuous  loop and you may have to change trains at  Edgware Road to carry on with your journey. </AdditionalAccessibilityInformation>
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Interchange</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>Circle</LineName>
+        <Platform />
+        <Direction>Eastbound</Direction>
+        <DirectionTowards>Barking</DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>137</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>40</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+        <Interchange>
+          <InterchangeLine>Hammersmith &amp; City</InterchangeLine>
+          <InterchangeDirection>Eastbound</InterchangeDirection>
+          <InterchangeDirectionTowards>Barking</InterchangeDirectionTowards>
+        </Interchange>
+      </Line>
+      <Line>
+        <LineName>Circle</LineName>
+        <Platform />
+        <Direction>Westbound</Direction>
+        <DirectionTowards>
+          High Street Kensington
+          and Hammersmith
+        </DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>180</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>50</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+        <Interchange>
+          <InterchangeLine>Circle</InterchangeLine>
+          <InterchangeDirection>Eastbound</InterchangeDirection>
+          <InterchangeDirectionTowards>High Street  Kensington</InterchangeDirectionTowards>
+        </Interchange>
+        <Interchange>
+          <InterchangeLine>Hammersmith &amp; City</InterchangeLine>
+          <InterchangeDirection>Westbound</InterchangeDirection>
+          <InterchangeDirectionTowards>Hammersmith</InterchangeDirectionTowards>
+        </Interchange>
+      </Line>
+      <Line>
+        <LineName>District</LineName>
+        <Platform />
+        <Direction>Westbound</Direction>
+        <DirectionTowards>Earl&#8217;s Court </DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>157</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>23</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>Hammersmith &amp; City</LineName>
+        <Platform />
+        <Direction>Eastbound</Direction>
+        <DirectionTowards>Barking</DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>137</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>40</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>Hammersmith &amp; City</LineName>
+        <Platform />
+        <Direction>Westbound</Direction>
+        <DirectionTowards>Hammersmith</DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>153</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>50</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Bakerloo line Entrance 1</Description>
+        <NaptanID>4900ZZLUERB1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Circle line Entrance 1</Description>
+        <NaptanID>4900ZZLUERC1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Circle line Entrance 2</Description>
+        <NaptanID>4900ZZLUERC2</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Emirates Greenwich Peninsula</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>Emirates Air Line</LineName>
+        <Platform />
+        <Direction />
+        <DirectionTowards />
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>TBC</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Emirates Royal Docks</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>Emirates Air Line</LineName>
+        <Platform />
+        <Direction />
+        <DirectionTowards />
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>TBC</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Finchley Road &amp; Frognal</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900FNCHLYR1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Forest Hill</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>1</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>Yes</SpecificEntranceRequired>
+        <SpecificEntranceInstructions>Both platforms are accessible only to/from the  main (Devonshire Road) northbound entrance</SpecificEntranceInstructions>
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>Partial</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Highbury &amp; Islington</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Crystal Palace and West Croydon</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900FORESTH1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900FORESTH2</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 3</Description>
+        <NaptanID>4900FORESTH3</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 4</Description>
+        <NaptanID>4900FORESTH4</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Gospel Oak</StationName>
+    <PublicToilet Exists="Yes">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>Yes</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Richmond and Clapham Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Stratford</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>3</Platform>
+        <Direction />
+        <DirectionTowards>Barking</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900GOSPLOK1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Hackney Central</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Richmond and Clapham Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Stratford</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900HACKNYC1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900HACKNYC2</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Hackney Wick</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>Yes</SpecificEntranceRequired>
+        <SpecificEntranceInstructions>You must use the correct entrance/exit depending on which  platform you are travelling to/from and you cannot change step-free between platforms. To access platform 1 use the Hepscott Road  entrance. To access platform 2 use the  Wallis Road entrance.</SpecificEntranceInstructions>
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Richmond and Clapham Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Stratford</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900HACKNYW1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900HACKNYW2</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Haggerston</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Highbury &amp; Islington</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>New Cross, Clapham Junction, Crystal Palace and West Croydon</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900HAGGERS1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Hampstead Heath</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900HMPSTDH1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Harringay Green Lanes</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>Yes</SpecificEntranceRequired>
+        <SpecificEntranceInstructions>You must use the correct entrance/exit depending on which platform you are travelling to and from as you cannot change  step-free between platforms within the station.  Both entrances are on Green Lanes</SpecificEntranceInstructions>
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Gospel Oak</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Barking</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900HRGYGL1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Harrow-on-the Hill</StationName>
+    <PublicToilet Exists="Yes">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation>You can change between fast, semi-fast and 'all stations' trains running in the same direction.</AdditionalAccessibilityInformation>
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Interchange</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>Partial</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>Metropolitan</LineName>
+        <Platform />
+        <Direction>Eastbound</Direction>
+        <DirectionTowards>Baker Street </DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>36</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>93</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+        <Interchange>
+          <InterchangeLine>National Rail</InterchangeLine>
+          <InterchangeDirection />
+          <InterchangeDirectionTowards />
+        </Interchange>
+      </Line>
+      <Line>
+        <LineName>Metropolitan</LineName>
+        <Platform />
+        <Direction>Westbound</Direction>
+        <DirectionTowards>Amersham and Chesham</DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>87</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+        <Interchange>
+          <InterchangeLine>National Rail</InterchangeLine>
+          <InterchangeDirection />
+          <InterchangeDirectionTowards />
+        </Interchange>
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900ZZLUHOH1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900ZZLUHOH2</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Hatch End</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation>You can only enter and exit platform 2 towards Watford Junction</AdditionalAccessibilityInformation>
+      <BlueBadgeCarParkSpaces>2</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Partial</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Watford Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900HTCHEND1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Headstone Lane</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation>You can only enter and exit platform 2 towards Watford Junction using the side entrance on Headstone Lane</AdditionalAccessibilityInformation>
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Partial</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Watford Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900HEDSTNL1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900HEDSTNL2</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Heathrow Terminal 5</StationName>
+    <PublicToilet Exists="Yes">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation>If you are travelling towards Central London, you need to board the &#64257;fth carriage</AdditionalAccessibilityInformation>
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>Yes</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>Yes</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>Piccadilly</LineName>
+        <Platform />
+        <Direction>Eastbound</Direction>
+        <DirectionTowards>Oakwood</DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>22</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>94</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900ZZLUHR51</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Homerton</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Richmond and Clapham Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Stratford</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900HOMRTON1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Honor Oak Park</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900HONROPK1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Hoxton</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Highbury &amp; Islington</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>New Cross, Clapham Junction, Crystal Palace and West Croydon</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900HOXTON1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900HOXTON2</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Imperial Wharf</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Clapham Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Stratford</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900CSEAH1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Kensal Rise</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation>You can only enter and exit platform 1 towards Richmond and Clapham Junction</AdditionalAccessibilityInformation>
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Partial</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Richmond and Clapham Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900KENR1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900KENR2</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Kentish Town West</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900KNTSHTW1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Kilburn High Road</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900KLBRNHR1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>King&#8217;s Cross St. Pancras</StationName>
+    <PublicToilet Exists="Yes">
+      <Location>In King's Cross National Rail station</Location>
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>Yes</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>Yes</AccessibleToilet>
+        <AccessibleToiletNote>(National Rail)</AccessibleToiletNote>
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>Partial</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>Circle</LineName>
+        <Platform />
+        <Direction>Eastbound</Direction>
+        <DirectionTowards>Liverpool Street </DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>Circle</LineName>
+        <Platform />
+        <Direction>Westbound</Direction>
+        <DirectionTowards>Edgware Road</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>Hammersmith &amp; City</LineName>
+        <Platform />
+        <Direction>Eastbound</Direction>
+        <DirectionTowards>Liverpool Street</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>Hammersmith &amp; City</LineName>
+        <Platform />
+        <Direction>Westbound</Direction>
+        <DirectionTowards />
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>Metropolitan</LineName>
+        <Platform />
+        <Direction>Eastbound</Direction>
+        <DirectionTowards>Liverpool Street </DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>Metropolitan</LineName>
+        <Platform />
+        <Direction>Westbound</Direction>
+        <DirectionTowards>Amersham, Chesham, Uxbridge and Watford</DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>Northern</LineName>
+        <Platform />
+        <Direction>Northbound</Direction>
+        <DirectionTowards>Edgware and High Barnet</DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>Northern</LineName>
+        <Platform />
+        <Direction>Southbound</Direction>
+        <DirectionTowards>Morden</DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>Piccadilly</LineName>
+        <Platform />
+        <Direction>Eastbound</Direction>
+        <DirectionTowards>Oakwood</DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>Piccadilly</LineName>
+        <Platform />
+        <Direction>Westbound</Direction>
+        <DirectionTowards>Heathrow</DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>Victoria</LineName>
+        <Platform />
+        <Direction>Northbound</Direction>
+        <DirectionTowards>Tottenham Hale </DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>Victoria</LineName>
+        <Platform />
+        <Direction>Southbound</Direction>
+        <DirectionTowards>Brixton</DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900ZZLUKSX1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900ZZLUKSX2</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 3</Description>
+        <NaptanID>4900ZZLUKSX3</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 4</Description>
+        <NaptanID>4900ZZLUKSX4</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 5</Description>
+        <NaptanID>4900ZZLUKSX5</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 6</Description>
+        <NaptanID>4900ZZLUKSX6</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 7</Description>
+        <NaptanID>4900ZZLUKSX7</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 8</Description>
+        <NaptanID>4900ZZLUKSX8</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 9</Description>
+        <NaptanID>4900ZZLUKSX9</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 10</Description>
+        <NaptanID>4900ZZLUKSXA</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 11</Description>
+        <NaptanID>4900ZZLUKSXB</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 12</Description>
+        <NaptanID>4900ZZLUKSXC</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>King George V</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>DLR</LineName>
+        <Platform />
+        <Direction />
+        <DirectionTowards />
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>9400ZZDLKGV1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Langdon Park</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>DLR</LineName>
+        <Platform />
+        <Direction />
+        <DirectionTowards />
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>490002034001 (TBC)</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Leyton Midland Road</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900LEYTNMR1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Leytonstone High Road</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900LYTNSHR1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>London City Airport</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>Yes</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>DLR</LineName>
+        <Platform />
+        <Direction />
+        <DirectionTowards />
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>9400ZZDLLCA1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Norwood Junction</StationName>
+    <PublicToilet Exists="Yes">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation>London Overground northbound only</AdditionalAccessibilityInformation>
+      <BlueBadgeCarParkSpaces>3</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>Yes</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Partial</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>Partial</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Dalston Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900NORWDJ1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900NORWDJ2</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 3</Description>
+        <NaptanID>4900NORWDJ3</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Peckham Rye</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description />
+        <NaptanID />
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Penge West</StationName>
+    <PublicToilet Exists="Yes">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation>Step-free northbound only</AdditionalAccessibilityInformation>
+      <BlueBadgeCarParkSpaces>2</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>Yes</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Partial</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Dalston Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900PENEW1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Pontoon Dock</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>DLR</LineName>
+        <Platform />
+        <Direction />
+        <DirectionTowards />
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>9400ZZDLPDK1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Queen&#8217;s Park</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Interchange</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>Bakerloo</LineName>
+        <Platform />
+        <Direction>Northbound</Direction>
+        <DirectionTowards>Harrow &amp; Wealdstone</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+        <Interchange>
+          <InterchangeLine>London Overground</InterchangeLine>
+          <InterchangeDirection>Northbound</InterchangeDirection>
+          <InterchangeDirectionTowards>Watford Junction</InterchangeDirectionTowards>
+        </Interchange>
+      </Line>
+      <Line>
+        <LineName>Bakerloo</LineName>
+        <Platform />
+        <Direction>Southbound</Direction>
+        <DirectionTowards>Oxford Circus </DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+        <Interchange>
+          <InterchangeLine>London Overground</InterchangeLine>
+          <InterchangeDirection>Eastbound</InterchangeDirection>
+          <InterchangeDirectionTowards>Euston</InterchangeDirectionTowards>
+        </Interchange>
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Watford Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Euston</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900ZZLUQPS1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Queens Road Peckham</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description />
+        <NaptanID />
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Regent&#8217;s Park</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900ZZLURGP1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>St. James&#8217;s Park</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900ZZLUSJP1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900ZZLUSJP2</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 3</Description>
+        <NaptanID>4900ZZLUSJP3</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 4</Description>
+        <NaptanID>4900ZZLUSJP4</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>St. John&#8217;s Wood</StationName>
+    <PublicToilet Exists="Yes">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900ZZLUSJW1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>St. Paul&#8217;s</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900ZZLUSPU1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900ZZLUSPU2</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Shepherd&#8217;s Bush (Central)</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description />
+        <NaptanID />
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Shepherd&#8217;s Bush (Overground)</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>Partial</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description />
+        <NaptanID />
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Shepherd&#8217;s Bush Market</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900ZZLUSBM1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900ZZLUSBM2</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Shoreditch High Street</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Highbury &amp; Islington</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>New Cross, Clapham Junction, Crystal Palace and West Croydon</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900SHRDHST1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>South Acton</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>Yes</SpecificEntranceRequired>
+        <SpecificEntranceInstructions>You must use the correct entrance/ exit depending on which platform you are  travelling to/from. To access platform 1 use  the Kingswood Terrace entrance. To access  platform 2 use the Palmerston Road entrance</SpecificEntranceInstructions>
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Richmond</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Stratford</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900SACTON1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>South Hampstead</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900SHMPSTD1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>South Tottenham</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900STOTNHM1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Star Lane</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>Yes</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>Yes</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>Partial</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>DLR</LineName>
+        <Platform />
+        <Direction />
+        <DirectionTowards />
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>9400ZZDLSTL1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Stratford High Street</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>Yes</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>Yes</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>DLR</LineName>
+        <Platform />
+        <Direction />
+        <DirectionTowards />
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Southbound</Description>
+        <NaptanID>9400ZZDLSHS1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Northbound</Description>
+        <NaptanID>9400ZZDLSHS2</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Stratford International</StationName>
+    <PublicToilet Exists="Yes">
+      <Location>In National Rail station</Location>
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>Yes</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>Partial</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>DLR</LineName>
+        <Platform />
+        <Direction />
+        <DirectionTowards />
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>9400ZZDLSIT1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Sydenham</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>Yes</SpecificEntranceRequired>
+        <SpecificEntranceInstructions>You must use the correct entrance/exit  depending on which platform you are travelling  to/from. Use the Peak Hill Gardens entrance for platform 1. Use the Station Approach entrance for platform 2</SpecificEntranceInstructions>
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>Partial</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Highbury &amp; Islington</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Crystal Palace and West Croydon</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900SYDENHM1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900SYDENHM2</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 3</Description>
+        <NaptanID>4900SYDENHM3</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Upper Holloway</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>Yes</SpecificEntranceRequired>
+        <SpecificEntranceInstructions>You must use the correct entrance/ exit depending on which platform you are  travelling to/from. Entrances to both platforms  are on Holloway Road</SpecificEntranceInstructions>
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Gospel Oak</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Barking</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900UPRHLWY1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Walthamstow Queen&#8217;s Road</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>1</Platform>
+        <Direction />
+        <DirectionTowards>Gospel Oak</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>2</Platform>
+        <Direction />
+        <DirectionTowards>Barking</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900WLTHQRD1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Wandsworth Road</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description />
+        <NaptanID />
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Wanstead Park</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900WNSTDPK1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Watford Junction</StationName>
+    <PublicToilet Exists="Yes">
+      <Location>In waiting area on platform 6, accessible toilet in ticket hal.</Location>
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>Yes</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>Partial</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>3</Platform>
+        <Direction />
+        <DirectionTowards>Euston</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>4</Platform>
+        <Direction />
+        <DirectionTowards>Euston</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>2100WATFDJ01</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Watford High Street</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>2100WATFDHS0</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>West Croydon</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>No</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>Yes</TramlinkInterchange>
+      <NationalRailInterchange>Partial</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>London Overground</LineName>
+        <Platform>3</Platform>
+        <Direction />
+        <DirectionTowards>Dalston Junction</DirectionTowards>
+        <StepMin />
+        <StepMax />
+        <GapMin />
+        <GapMax />
+        <LevelAccessByManualRamp>Yes</LevelAccessByManualRamp>
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Entrance 1</Description>
+        <NaptanID>4900WCROYDN1</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 2</Description>
+        <NaptanID>4900WCROYDN2</NaptanID>
+      </Naptan>
+      <Naptan>
+        <Description>Entrance 3</Description>
+        <NaptanID>4900WCROYDN3</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>West Silvertown</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>DLR</LineName>
+        <Platform />
+        <Direction />
+        <DirectionTowards />
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>9400ZZDLWSV1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Woodgrange Park</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces />
+      <TaxiRanksOutsideStation />
+      <Lifts>
+        <AccessViaLift />
+        <LimitedCapacityLift />
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet />
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired />
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange />
+      <PierInterchange />
+      <MainBusInterchange />
+      <EmiratesAirLineInterchange />
+      <TramlinkInterchange />
+      <NationalRailInterchange />
+    </AccessibleInterchanges>
+    <Lines>
+
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900WDGRNPK1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Wood Lane</StationName>
+    <PublicToilet Exists="Yes">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>Yes</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>No</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>No</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>Circle</LineName>
+        <Platform />
+        <Direction>Eastbound</Direction>
+        <DirectionTowards>Edgware Road </DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>168</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>50</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>Circle</LineName>
+        <Platform />
+        <Direction>Westbound</Direction>
+        <DirectionTowards>Hammersmith </DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>167</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>0</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>Hammersmith &amp; City</LineName>
+        <Platform />
+        <Direction>Eastbound</Direction>
+        <DirectionTowards>Edgware Road </DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>168</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>50</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+      <Line>
+        <LineName>Hammersmith &amp; City</LineName>
+        <Platform />
+        <Direction>Westbound</Direction>
+        <DirectionTowards>Hammersmith</DirectionTowards>
+        <StepMin>0</StepMin>
+        <StepMax>167</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>0</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>4900ZZLUWLA1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+  <Station>
+    <StationName>Woolwich Arsenal</StationName>
+    <PublicToilet Exists="No">
+      <Location />
+      <PaymentRequired>No</PaymentRequired>
+    </PublicToilet>
+    <Accessibility>
+      <AdditionalAccessibilityInformation />
+      <BlueBadgeCarParkSpaces>0</BlueBadgeCarParkSpaces>
+      <TaxiRanksOutsideStation>No</TaxiRanksOutsideStation>
+      <Lifts>
+        <AccessViaLift>Yes</AccessViaLift>
+        <LimitedCapacityLift>No</LimitedCapacityLift>
+      </Lifts>
+      <Toilets>
+        <AccessibleToilet>No</AccessibleToilet>
+        <AccessibleToiletNote />
+      </Toilets>
+      <SpecificEntrance>
+        <SpecificEntranceRequired>No</SpecificEntranceRequired>
+        <SpecificEntranceInstructions />
+      </SpecificEntrance>
+      <AccessibilityType>Full</AccessibilityType>
+    </Accessibility>
+    <AccessibleInterchanges>
+      <AirportInterchange>No</AirportInterchange>
+      <PierInterchange>No</PierInterchange>
+      <MainBusInterchange>Yes</MainBusInterchange>
+      <EmiratesAirLineInterchange>No</EmiratesAirLineInterchange>
+      <TramlinkInterchange>No</TramlinkInterchange>
+      <NationalRailInterchange>Partial</NationalRailInterchange>
+    </AccessibleInterchanges>
+    <Lines>
+      <Line>
+        <LineName>DLR</LineName>
+        <Platform />
+        <Direction />
+        <DirectionTowards />
+        <StepMin>0</StepMin>
+        <StepMax>50</StepMax>
+        <GapMin>0</GapMin>
+        <GapMax>85</GapMax>
+        <LevelAccessByManualRamp />
+        <LocationOfLevelAccess />
+
+      </Line>
+    </Lines>
+    <Naptans>
+      <Naptan>
+        <Description>Main Entrance</Description>
+        <NaptanID>9400ZZDLWLA1</NaptanID>
+      </Naptan>
+    </Naptans>
+  </Station>
+</Stations>

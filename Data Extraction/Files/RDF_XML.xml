@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:ns1="http://tfl.gov.uk/tfl/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="transporte">
+    <ns1:hasLines rdf:resource="linea"/>
+    <ns1:canBe>Underground</ns1:canBe>
+    <ns1:canBe>Tube</ns1:canBe>
+    <ns1:hasStations rdf:resource="ActonTown"/>
+    <ns1:canBe>DLR</ns1:canBe>
+  </rdf:Description>
+  <rdf:Description rdf:about="ActonTown">
+    <ns1:hasLines rdf:resource="Lines"/>
+    <ns1:hasName>Acton Town</ns1:hasName>
+    <ns1:belongsTo rdf:resource="linea"/>
+    <ns1:hasEntrances rdf:resource="entrances"/>
+    <ns1:belongsToZone rdf:resource="zone"/>
+    <ns1:belongsTo rdf:resource="transporte"/>
+    <ns1:hasPublicToilet rdf:resource="PublicToilet"/>
+    <ns1:hasNaptans rdf:resource="naptans"/>
+    <ns1:hasFacilities rdf:resource="facilities"/>
+    <ns1:hasPlacemark rdf:resource="Placemark"/>
+    <ns1:infoAccessibility rdf:resource="accessibility"/>
+    <ns1:hasAccessibleInterchanges rdf:resource="accessibleInterchanges"/>
+    <ns1:hasContactDetails rdf:resource="contactDetails"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="line2">
+    <ns1:directionTowards>Ealing Broadway </ns1:directionTowards>
+    <ns1:stepMinis>0</ns1:stepMinis>
+    <ns1:gapMaxis>103</ns1:gapMaxis>
+    <ns1:levelAccess>None</ns1:levelAccess>
+    <ns1:hasAccessbyramp>None</ns1:hasAccessbyramp>
+    <ns1:stepMaxis>300</ns1:stepMaxis>
+    <ns1:hasLineName>District</ns1:hasLineName>
+    <ns1:hasPlatform>None</ns1:hasPlatform>
+    <ns1:gapMinis>0</ns1:gapMinis>
+    <ns1:directionTo>Westbound</ns1:directionTo>
+  </rdf:Description>
+  <rdf:Description rdf:about="accessibleInterchanges">
+    <ns1:hasTramlinkInterchange>No</ns1:hasTramlinkInterchange>
+    <ns1:hasAirportInterchange>No</ns1:hasAirportInterchange>
+    <ns1:hasPierInterchange>No</ns1:hasPierInterchange>
+    <ns1:hasNationalRailInterchange>No</ns1:hasNationalRailInterchange>
+    <ns1:hasEmiratesAirLineInterchange>No</ns1:hasEmiratesAirLineInterchange>
+    <ns1:hasMainBusInterchange>No</ns1:hasMainBusInterchange>
+  </rdf:Description>
+  <rdf:Description rdf:about="line4">
+    <ns1:directionTo>Westbound</ns1:directionTo>
+    <ns1:hasPlatform>None</ns1:hasPlatform>
+    <ns1:hasLineName>Piccadilly</ns1:hasLineName>
+    <ns1:stepMaxis>141</ns1:stepMaxis>
+    <ns1:hasAccessbyramp>None</ns1:hasAccessbyramp>
+    <ns1:gapMinis>76</ns1:gapMinis>
+    <ns1:directionTowards>Uxbridge or Heathrow</ns1:directionTowards>
+    <ns1:stepMinis>127</ns1:stepMinis>
+    <ns1:levelAccess>None</ns1:levelAccess>
+    <ns1:gapMaxis>168</ns1:gapMaxis>
+  </rdf:Description>
+  <rdf:Description rdf:about="Lines">
+    <ns1:lineInformation rdf:resource="line1"/>
+    <ns1:lineInformation rdf:resource="line3"/>
+    <ns1:lineInformation rdf:resource="line4"/>
+    <ns1:lineInformation rdf:resource="line2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="line3">
+    <ns1:hasLineName>Piccadilly</ns1:hasLineName>
+    <ns1:stepMinis>143</ns1:stepMinis>
+    <ns1:directionTowards>Oakwood</ns1:directionTowards>
+    <ns1:levelAccess>None</ns1:levelAccess>
+    <ns1:hasPlatform>None</ns1:hasPlatform>
+    <ns1:directionTo>Eastbound</ns1:directionTo>
+    <ns1:hasAccessbyramp>None</ns1:hasAccessbyramp>
+    <ns1:stepMaxis>197</ns1:stepMaxis>
+    <ns1:gapMaxis>156</ns1:gapMaxis>
+    <ns1:gapMinis>125</ns1:gapMinis>
+  </rdf:Description>
+  <rdf:Description rdf:about="accessibility">
+    <ns1:hasTaxiRanksOutsideStation>No</ns1:hasTaxiRanksOutsideStation>
+    <ns1:hasSpecificEntrance rdf:resource="specificEntrance"/>
+    <ns1:hasBlueBadgeCarParkSpaces>None</ns1:hasBlueBadgeCarParkSpaces>
+    <ns1:hasToilets rdf:resource="toilets"/>
+    <ns1:hasAdditionalInformation>None</ns1:hasAdditionalInformation>
+    <ns1:hasLifts rdf:resource="lifts"/>
+    <ns1:accessibilityType>Full</ns1:accessibilityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="facilities">
+    <ns1:hasEscalators>4</ns1:hasEscalators>
+    <ns1:hasCashMachines>4</ns1:hasCashMachines>
+    <ns1:hasOtherFacilities>0</ns1:hasOtherFacilities>
+    <ns1:hasTicketHalls>1</ns1:hasTicketHalls>
+    <ns1:hasVendingMachines>0 on platforms, 0 in ticket halls, 0 elsewhere</ns1:hasVendingMachines>
+    <ns1:hasPhotoBooths>2</ns1:hasPhotoBooths>
+    <ns1:hasCarkPark>4 snack, 0 drink</ns1:hasCarkPark>
+    <ns1:hasWaitingRoom>subway to street.</ns1:hasWaitingRoom>
+    <ns1:hasHelpPoints>yes</ns1:hasHelpPoints>
+    <ns1:hasGates>yes</ns1:hasGates>
+    <ns1:hasLifts>0</ns1:hasLifts>
+    <ns1:hasPayphones>no</ns1:hasPayphones>
+    <ns1:hasToilets>2</ns1:hasToilets>
+    <ns1:hasBridge>yes</ns1:hasBridge>
+  </rdf:Description>
+  <rdf:Description rdf:about="entrance1">
+    <ns1:hasName>Gunnersbury Lane</ns1:hasName>
+    <ns1:infoPlatformToTrain rdf:resource="platformToTrain"/>
+    <ns1:infoBookingHallToPlatform rdf:resource="bookingHallToPlatform"/>
+    <ns1:infoEntranceToBookingHall>Level</ns1:infoEntranceToBookingHall>
+  </rdf:Description>
+  <rdf:Description rdf:about="path">
+    <ns1:hasHeading>EASTBOUND</ns1:hasHeading>
+    <ns1:hasPathDescription>14, 14 stairs down</ns1:hasPathDescription>
+  </rdf:Description>
+  <rdf:Description rdf:about="zone">
+    <ns1:nameZone>3</ns1:nameZone>
+  </rdf:Description>
+  <rdf:Description rdf:about="linea">
+    <ns1:belongsTo rdf:resource="transporte"/>
+    <ns1:hasStations rdf:resource="ActonTown"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="line1">
+    <ns1:stepMaxis>217</ns1:stepMaxis>
+    <ns1:hasLineName>District</ns1:hasLineName>
+    <ns1:gapMinis>0</ns1:gapMinis>
+    <ns1:gapMaxis>80</ns1:gapMaxis>
+    <ns1:directionTo>Eastbound</ns1:directionTo>
+    <ns1:directionTowards>Upminster</ns1:directionTowards>
+    <ns1:levelAccess>None</ns1:levelAccess>
+    <ns1:hasPlatform>None</ns1:hasPlatform>
+    <ns1:hasAccessbyramp>None</ns1:hasAccessbyramp>
+    <ns1:stepMinis>0</ns1:stepMinis>
+  </rdf:Description>
+  <rdf:Description rdf:about="specificEntrance">
+    <ns1:specificEntranceInstructions>None</ns1:specificEntranceInstructions>
+    <ns1:specificEntranceRequired>No</ns1:specificEntranceRequired>
+  </rdf:Description>
+  <rdf:Description rdf:about="Placemark">
+    <ns1:hasDescription>Acton Town Station, London Underground Ltd., Gunnersbury Lane, London, W3 8HN</ns1:hasDescription>
+    <ns1:hasName>Acton Town Station</ns1:hasName>
+    <ns1:hasPoint rdf:resource="point"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="platform1">
+    <ns1:hasTrainName>District</ns1:hasTrainName>
+    <ns1:numSteps>LEVEL_300</ns1:numSteps>
+  </rdf:Description>
+  <rdf:Description rdf:about="naptan2">
+    <ns1:naptanDescription>Entrance 2</ns1:naptanDescription>
+    <ns1:naptanID>4900ZZLUACT2</ns1:naptanID>
+  </rdf:Description>
+  <rdf:Description rdf:about="point">
+    <ns1:hasCoordinates>-.280251203536110600,51.502749773000570000,0</ns1:hasCoordinates>
+  </rdf:Description>
+  <rdf:Description rdf:about="naptan1">
+    <ns1:naptanID>4900ZZLUACT1</ns1:naptanID>
+    <ns1:naptanDescription>Entrance 1</ns1:naptanDescription>
+  </rdf:Description>
+  <rdf:Description rdf:about="contactDetails">
+    <ns1:hasAddress>Acton Town Station, London Underground Ltd., Gunnersbury Lane, London, W3 8HN</ns1:hasAddress>
+    <ns1:hasPhone>0845 330 9875</ns1:hasPhone>
+  </rdf:Description>
+  <rdf:Description rdf:about="lifts">
+    <ns1:hasAccessViaLift>Yes</ns1:hasAccessViaLift>
+    <ns1:LimitedCapacityLift>No</ns1:LimitedCapacityLift>
+  </rdf:Description>
+  <rdf:Description rdf:about="toilets">
+    <ns1:hasAccessibleToilet>Yes</ns1:hasAccessibleToilet>
+    <ns1:AccessibleToiletNote>None</ns1:AccessibleToiletNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="PublicToilet">
+    <ns1:isPaymentRequired>Yes</ns1:isPaymentRequired>
+    <ns1:hasLocation>None</ns1:hasLocation>
+  </rdf:Description>
+  <rdf:Description rdf:about="platformToTrain">
+    <ns1:hasPlatformElem rdf:resource="platform2"/>
+    <ns1:hasPlatformElem rdf:resource="platform1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="naptans">
+    <ns1:naptanElement rdf:resource="naptan1"/>
+    <ns1:naptanElement rdf:resource="naptan2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="bookingHallToPlatform">
+    <ns1:hasPath rdf:resource="path"/>
+    <ns1:hasPointName rdf:nodeID="N048c97ef01aa42d3aa100c3ea610b7d4"/>
+    <ns1:hasPointName rdf:nodeID="N88c4827c3eba49da87f5c58814a55ad0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="entrances">
+    <ns1:entranceElement rdf:resource="entrance1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="platform2">
+    <ns1:numSteps>LEVEL_100</ns1:numSteps>
+    <ns1:hasTrainName>Piccadilly </ns1:hasTrainName>
+  </rdf:Description>
+</rdf:RDF>
